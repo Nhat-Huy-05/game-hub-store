@@ -47,25 +47,54 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right content - Featured game card */}
-          <div className="relative">
-            <div className="aspect-[3/4] overflow-hidden rounded-lg bg-gradient-to-br from-purple-500 via-violet-600 to-indigo-700 shadow-2xl">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="space-y-4 p-8 text-center">
-                  <div className="text-6xl font-bold text-white/90">
-                    FEATURED
-                  </div>
-                  <div className="text-2xl font-semibold text-white/80">
-                    Game Title
-                  </div>
-                </div>
+          {/* Right content - Overlapping game images */}
+          <div className="relative h-[550px] w-full">
+            {/* Top row - 3 main cards */}
+            <div className="absolute inset-x-0 top-0 flex h-80 items-center justify-center gap-4">
+              {/* God of War - Left */}
+              <div className="h-80 w-56 overflow-hidden rounded-2xl shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                <img
+                  src="/images/God_of_War_Picture.png"
+                  alt="God of War"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+              {/* Mario Bros - Center (slightly higher) */}
+              <div className="relative -top-8 z-10 h-96 w-64 overflow-hidden rounded-3xl border-4 border-background shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                <img
+                  src="/images/Mario_Bros_Picture.png"
+                  alt="Mario Bros"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+              {/* Spider-Man - Right */}
+              <div className="h-80 w-56 overflow-hidden rounded-2xl shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                <img
+                  src="/images/Spider_Man_Picture.png"
+                  alt="Spider Man"
+                  className="h-full w-full object-cover"
+                />
               </div>
             </div>
 
-            {/* Floating badge */}
-            <div className="absolute -right-4 -bottom-4 rounded-lg border border-border bg-background p-4 shadow-lg">
-              <div className="text-sm font-medium">Top Rated</div>
-              <div className="text-2xl font-bold text-primary">4.9★</div>
+            {/* Bottom row - Witcher 3 & Dying Light */}
+            <div className="absolute inset-x-0 bottom-0 flex justify-center gap-4">
+              <div className="h-60 w-48 overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                <img
+                  src="/images/The_Witcher3_Picture.png"
+                  alt="The Witcher 3"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="h-60 w-48 overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                <img
+                  src="/images/Dying_Light_Picture.png"
+                  alt="Dying Light"
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>

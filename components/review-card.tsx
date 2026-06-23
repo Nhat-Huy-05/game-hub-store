@@ -1,25 +1,31 @@
-import { Star } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Star } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 
 interface ReviewCardProps {
-  name: string;
-  game: string;
-  rating: number;
-  review: string;
-  avatar: string;
+  name: string
+  game: string
+  rating: number
+  review: string
+  avatar: string
 }
 
-export function ReviewCard({ name, game, rating, review, avatar }: ReviewCardProps) {
+export function ReviewCard({
+  name,
+  game,
+  rating,
+  review,
+  avatar,
+}: ReviewCardProps) {
   return (
-    <Card className="h-full">
-      <CardContent className="pt-6 space-y-4">
+    <Card className="h-full cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+      <CardContent className="space-y-4 pt-6">
         {/* Rating stars */}
         <div className="flex gap-1">
           {Array.from({ length: 5 }).map((_, i) => (
             <Star
               key={i}
-              className={`w-4 h-4 ${
+              className={`h-4 w-4 ${
                 i < rating
                   ? "fill-primary text-primary"
                   : "fill-muted text-muted"
@@ -29,17 +35,17 @@ export function ReviewCard({ name, game, rating, review, avatar }: ReviewCardPro
         </div>
 
         {/* Review text */}
-        <p className="text-muted-foreground leading-relaxed">
-          "{review}"
-        </p>
+        <p className="leading-relaxed text-muted-foreground">"{review}"</p>
 
         {/* User info */}
-        <div className="flex items-center gap-3 pt-4 border-t">
-          <div className={`w-10 h-10 rounded-full ${avatar} flex items-center justify-center text-white font-semibold`}>
+        <div className="flex items-center gap-3 border-t pt-4">
+          <div
+            className={`flex h-10 w-10 items-center justify-center rounded-full font-semibold text-white ${avatar}`}
+          >
             {name.charAt(0)}
           </div>
           <div>
-            <p className="font-semibold text-sm">{name}</p>
+            <p className="text-sm font-semibold">{name}</p>
             <Badge variant="secondary" className="text-xs">
               Playing: {game}
             </Badge>
@@ -47,5 +53,5 @@ export function ReviewCard({ name, game, rating, review, avatar }: ReviewCardPro
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }

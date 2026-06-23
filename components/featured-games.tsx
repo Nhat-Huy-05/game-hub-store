@@ -8,7 +8,7 @@ const games = [
     genre: "Action RPG",
     tags: ["Open World", "Cyberpunk", "Sci-Fi", "Shooter"],
     gradient: "bg-gradient-to-br from-cyan-500 via-blue-600 to-purple-700",
-    image: "/images/CyberPunk 2077 logo.png",
+    image: "/images/CyberPunk_2077_Picture.png",
   },
   {
     title: "It Take Two",
@@ -17,7 +17,7 @@ const games = [
     genre: "Adventure",
     tags: ["Co-op", "Platformer", "Puzzle"],
     gradient: "bg-gradient-to-br from-amber-500 via-orange-600 to-red-700",
-    image: "/images/it take two logo.jpg",
+    image: "/images/It_Take_Two_Picture.png",
   },
   {
     title: "Astro Bot",
@@ -26,7 +26,7 @@ const games = [
     genre: "Platformer",
     tags: ["Action", "3D", "Singleplayer"],
     gradient: "bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-700",
-    image: "/images/astro bot logo.jpg",
+    image: "/images/Astro_Bot_Picture.png",
   },
   {
     title: "Elden Ring",
@@ -35,7 +35,7 @@ const games = [
     genre: "Action RPG",
     tags: ["Open World", "Souls-like", "Fantasy", "PvP", "Hentai"],
     gradient: "bg-gradient-to-br from-green-500 via-emerald-600 to-teal-700",
-    image: "/images/elden ring logo.jpg",
+    image: "/images/Elden_Ring_Picture.png",
   },
   {
     title: "Stardew Valley",
@@ -44,7 +44,7 @@ const games = [
     genre: "Simulation",
     tags: ["Farming", "Relaxing", "Indie", "Multiplayer"],
     gradient: "bg-gradient-to-br from-pink-500 via-rose-600 to-red-700",
-    image: "/images/Logo_of_Stardew_Valley.png",
+    image: "/images/Stardew_Valley_Picture.png",
   },
   {
     title: "Dark Souls Remastered",
@@ -53,7 +53,7 @@ const games = [
     genre: "Action",
     tags: ["Souls-like", "Dark Fantasy", "Difficult", "Boss Rush"],
     gradient: "bg-gradient-to-br from-slate-500 via-gray-700 to-zinc-900",
-    image: "/images/Dark_Souls_Remastered_Logo.png",
+    image: "/images/Dark_Souls_Remastered_Picture.png",
   },
 ]
 
