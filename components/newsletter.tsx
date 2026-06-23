@@ -1,40 +1,47 @@
-"use client";
+"use client"
 
-import { useState } from "react";
-import { Mail, Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Check, Mail } from "lucide-react"
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 
 export function Newsletter() {
-  const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [email, setEmail] = useState("")
+  const [isSubscribed, setIsSubscribed] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
     if (email) {
-      setIsSubscribed(true);
-      setEmail("");
-      setTimeout(() => setIsSubscribed(false), 3000);
+      setIsSubscribed(true)
+      setEmail("")
+      setTimeout(() => setIsSubscribed(false), 3000)
     }
-  };
+  }
 
   return (
-    <section id="community" className="py-24 bg-gradient-to-br from-primary/10 via-background to-accent/10">
+    <section
+      id="community"
+      className="bg-gradient-to-br from-primary/10 via-background to-accent/10 py-24"
+    >
       <div className="container">
-        <div className="max-w-2xl mx-auto text-center space-y-8">
+        <div className="mx-auto max-w-2xl space-y-8 text-center">
           <div className="space-y-4">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-              <Mail className="w-8 h-8 text-primary" />
+            <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+              <Mail className="h-8 w-8 text-primary" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
               Join the Community
             </h2>
-            <p className="text-muted-foreground text-lg">
-              Get exclusive deals, new game releases, and weekly updates delivered straight to your inbox.
+            <p className="text-lg text-muted-foreground">
+              Get exclusive deals, new game releases, and weekly updates
+              delivered straight to your inbox.
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <form
+            onSubmit={handleSubmit}
+            className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row"
+          >
             <Input
               type="email"
               placeholder="Enter your email"
@@ -56,22 +63,22 @@ export function Newsletter() {
             </Button>
           </form>
 
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground pt-4">
+          <div className="flex flex-wrap justify-center gap-6 pt-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-primary" />
+              <Check className="h-4 w-4 text-primary" />
               <span>Weekly game updates</span>
             </div>
             <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-primary" />
+              <Check className="h-4 w-4 text-primary" />
               <span>Exclusive discounts</span>
             </div>
             <div className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-primary" />
+              <Check className="h-4 w-4 text-primary" />
               <span>Early access to sales</span>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
+  )
 }
