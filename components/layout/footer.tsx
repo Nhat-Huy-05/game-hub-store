@@ -1,7 +1,8 @@
 "use client"
 
-import { Check, ExternalLink, Mail, MessageCircle, Share2 } from "lucide-react"
+import { ExternalLink, Mail, MessageCircle, Share2 } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 const footerLinks = {
   product: [
@@ -33,7 +34,17 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t bg-muted/30">
+    <footer className="relative border-t bg-muted/30">
+      <div className="pointer-events-none absolute -top-55 right-0 w-60">
+        <Image
+          src="/images/BonFire_Picture.png"
+          alt="decoration"
+          width={256}
+          height={256}
+          className="object-contain"
+        />
+      </div>
+
       <div className="container py-24">
         <div className="mb-12 grid gap-8 lg:grid-cols-5">
           {/* Brand */}

@@ -1,4 +1,4 @@
-import { ReviewCard } from "@/components/review-card"
+import { ReviewCard } from "@/components/cards/review-card"
 
 const reviews = [
   {
@@ -89,7 +89,7 @@ export function PlayerReviews() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map((review) => (
             <ReviewCard key={review.name} {...review} />
           ))}

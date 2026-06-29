@@ -18,7 +18,7 @@ export function ReviewCard({
   avatar,
 }: ReviewCardProps) {
   return (
-    <Card className="h-full cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
+    <Card className="h-full cursor-pointer border-2 bg-card transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl">
       <CardContent className="space-y-4 pt-6">
         {/* Rating stars */}
         <div className="flex gap-1">

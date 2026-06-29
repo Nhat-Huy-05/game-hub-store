@@ -4,13 +4,13 @@ import Link from "next/link"
 import { Menu } from "lucide-react"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/theme-toggle"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Games", href: "#games" },
   { label: "Features", href: "#features" },
+  { label: "Gaming Gear", href: "#gaming-gear" },
   { label: "Reviews", href: "#reviews" },
   { label: "Community", href: "#community" },
 ]
@@ -54,7 +54,6 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <ThemeToggle />
           <Button variant="ghost" className="hidden md:inline-flex">
             Login
           </Button>

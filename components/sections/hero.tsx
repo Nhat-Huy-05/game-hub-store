@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
 
 export function Hero() {
   return (
@@ -9,10 +10,10 @@ export function Hero() {
       className="relative flex min-h-screen items-center overflow-hidden"
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/20" />
+      <div className="absolute inset-0 bg-linear-to-br from-primary/20 via-background to-accent/20" />
 
       {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]" />
 
       <div className="relative z-10 container pt-20 pb-16">
         <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -36,23 +37,24 @@ export function Hero() {
 
             <div className="flex flex-wrap gap-4">
               <Button size="lg" asChild>
-                <a href="#games">
+                <Link href="#games">
                   Browse Games
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
+                </Link>
               </Button>
+
               <Button size="lg" variant="outline" asChild>
-                <a href="#features">Learn More</a>
+                <Link href="#features">Learn More</Link>
               </Button>
             </div>
           </div>
 
           {/* Right content - Overlapping game images */}
-          <div className="relative h-[550px] w-full">
+          <div className="relative h-137.5 w-full">
             {/* Top row - 3 main cards */}
             <div className="absolute inset-x-0 top-0 flex h-80 items-center justify-center gap-4">
               {/* God of War - Left */}
-              <div className="h-80 w-56 overflow-hidden rounded-2xl shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+              <div className="h-80 w-56 overflow-hidden rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                 <img
                   src="/images/God_of_War_Picture.png"
                   alt="God of War"
@@ -61,7 +63,7 @@ export function Hero() {
               </div>
 
               {/* Mario Bros - Center (slightly higher) */}
-              <div className="relative -top-8 z-10 h-96 w-64 overflow-hidden rounded-3xl border-4 border-background shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+              <div className="relative -top-8 z-10 h-96 w-64 overflow-hidden rounded-3xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                 <img
                   src="/images/Mario_Bros_Picture.png"
                   alt="Mario Bros"
@@ -70,7 +72,7 @@ export function Hero() {
               </div>
 
               {/* Spider-Man - Right */}
-              <div className="h-80 w-56 overflow-hidden rounded-2xl shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+              <div className="h-80 w-56 overflow-hidden rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                 <img
                   src="/images/Spider_Man_Picture.png"
                   alt="Spider Man"
@@ -81,14 +83,14 @@ export function Hero() {
 
             {/* Bottom row - Witcher 3 & Dying Light */}
             <div className="absolute inset-x-0 bottom-0 flex justify-center gap-4">
-              <div className="h-60 w-48 overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+              <div className="h-60 w-48 overflow-hidden rounded-2xl shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                 <img
                   src="/images/The_Witcher3_Picture.png"
                   alt="The Witcher 3"
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div className="h-60 w-48 overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+              <div className="h-60 w-48 overflow-hidden rounded-2xl shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                 <img
                   src="/images/Dying_Light_Picture.png"
                   alt="Dying Light"

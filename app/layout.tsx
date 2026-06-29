@@ -2,7 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google"
 import { ThemeProvider as NextThemesProvider } from "next-themes"
 
 import "./globals.css"
-import { Navbar } from "@/components/navbar"
+import { Navbar } from "@/components/layout/navbar"
+import { Footer } from "@/components/layout/footer"
 import { cn } from "@/lib/utils"
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" })
@@ -28,15 +29,23 @@ export default function RootLayout({
         geist.variable
       )}
     >
+      <head>
+        <script
+          async
+          crossOrigin="anonymous"
+          src="https://tweakcn.com/live-preview.min.js"
+        />
+      </head>
       <body>
         <NextThemesProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
           <Navbar />
-          {children}
+          <main>{children}</main>
+          <Footer />
         </NextThemesProvider>
       </body>
     </html>
