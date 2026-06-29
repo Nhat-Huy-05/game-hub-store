@@ -1,10 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { Menu } from "lucide-react"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -39,8 +37,7 @@ export function Navbar() {
           <span className="text-xl font-bold">GameHub</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex md:items-center md:gap-6">
+        <div className="flex items-center gap-6">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -54,37 +51,10 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <Button variant="ghost" className="hidden md:inline-flex">
+          <Button variant="ghost" className="cursor-pointer">
             Login
           </Button>
-          <Button className="hidden md:inline-flex">Sign Up</Button>
-
-          {/* Mobile Navigation */}
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <div className="mt-8 flex flex-col gap-4">
-                {navItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="text-lg font-medium transition-colors hover:text-primary"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-                <div className="mt-4 flex flex-col gap-2">
-                  <Button variant="ghost">Login</Button>
-                  <Button>Sign Up</Button>
-                </div>
-              </div>
-            </SheetContent>
-          </Sheet>
+          <Button className="cursor-pointer">Sign Up</Button>
         </div>
       </nav>
     </header>

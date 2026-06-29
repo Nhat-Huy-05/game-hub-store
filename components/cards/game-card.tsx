@@ -72,7 +72,9 @@ export function GameCard({
           )}
           <span className="text-xl font-bold">${finalPrice.toFixed(2)}</span>
         </div>
-        <Button size="sm">Add to Cart</Button>
+        <Button size="sm" className="cursor-pointer">
+          Add to Cart
+        </Button>
       </CardFooter>
     </Card>
   )

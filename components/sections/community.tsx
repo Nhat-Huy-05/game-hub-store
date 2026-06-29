@@ -28,9 +28,19 @@ export function Community() {
   return (
     <section
       id="community"
-      className="bg-linear-to-br from-primary/10 via-background to-accent/10 py-24"
+      className="relative overflow-hidden bg-linear-to-br from-primary/10 via-background to-accent/10 py-24"
     >
-      <div className="container">
+      {/* Chấm góc trên trái */}
+      <div
+        className="absolute top-9 left-85 h-40 w-40 opacity-100"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle, #2d45b9ff 2.5px, transparent 1.5px)",
+          backgroundSize: "18px 18px",
+        }}
+      />
+
+      <div className="relative z-10 container">
         <Card className="mx-auto max-w-2xl border-2">
           <CardHeader className="space-y-4 text-center">
             <div className="mx-auto mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
@@ -59,7 +69,12 @@ export function Community() {
                 className="flex-1"
                 disabled={isSubscribed}
               />
-              <Button type="submit" size="lg" disabled={isSubscribed}>
+              <Button
+                type="submit"
+                size="lg"
+                disabled={isSubscribed}
+                className="cursor-pointer"
+              >
                 {isSubscribed ? (
                   <>
                     <Check className="mr-2 h-4 w-4" />

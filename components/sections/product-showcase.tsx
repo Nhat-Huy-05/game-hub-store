@@ -51,7 +51,7 @@ export function ProductShowcase() {
               </p>
             </div>
 
-            <Button size="lg" className="rounded-full px-8">
+            <Button size="lg" className="cursor-pointer rounded-full px-8">
               Explore
             </Button>
           </div>
@@ -68,7 +68,7 @@ export function ProductShowcase() {
                 {/* Card wrapper */}
                 <div className="group relative overflow-hidden rounded-2xl">
                   {/* Nền xanh trượt từ dưới lên */}
-                  <div className="absolute inset-0 translate-y-full rounded-2xl bg-primary/10 transition-transform duration-300 group-hover:translate-y-[50%]" />
+                  <div className="absolute inset-0 translate-y-full rounded-2xl bg-primary/10 transition-transform duration-300 group-hover:translate-y-[40%]" />
 
                   {/* Ảnh */}
                   <div className="relative flex h-96 items-center justify-center">
@@ -82,7 +82,7 @@ export function ProductShowcase() {
 
                   {/* Nút + xuất hiện khi hover */}
                   <button
-                    className={`absolute bottom-4 left-1/2 z-10 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-white shadow-lg transition-all duration-300 hover:bg-primary hover:text-white ${
+                    className={`absolute bottom-4 left-1/2 z-10 flex h-12 w-12 -translate-x-1/2 cursor-pointer items-center justify-center rounded-full bg-white shadow-lg transition-all duration-300 hover:bg-primary hover:text-white ${
                       hoveredProduct === product.id
                         ? "scale-100 opacity-100"
                         : "scale-75 opacity-0"
