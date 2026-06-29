@@ -28,7 +28,7 @@ export function Community() {
   return (
     <section
       id="community"
-      className="relative overflow-hidden bg-linear-to-br from-primary/10 via-background to-accent/10 py-24"
+      className="relative overflow-hidden bg-background py-24"
     >
       {/* Chấm góc trên trái */}
       <div
